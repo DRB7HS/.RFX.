@@ -10,7 +10,7 @@
             <key>Label</key>
             <string>RFX ON TOP</string>
             <key>PayloadDisplayName</key>
-            <string>RTX Web App</string>
+            <string>RFX Web App</string>
             <key>PayloadIdentifier</key>
             <string>com.rtx.ios</string>
             <key>PayloadType</key>
