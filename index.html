@@ -40,7 +40,7 @@
             z-index: -2;
         }
 
-        /* طبقة داكنة خفيفة لإعطاء فخامة وبروز للمحتوى */
+        
         .overlay {
             position: fixed;
             top: 0;
@@ -51,7 +51,7 @@
             z-index: -1;
         }
 
-        /* الشريط الأسود الطويل على اليمين */
+        
         .side-bar-line {
             position: fixed;
             top: 0;
@@ -67,11 +67,11 @@
             padding-top: 20px;
         }
 
-        /* زر القائمة (الثلاث خطوط) */
+        
         .menu-btn {
             background: none;
             border: none;
-            color: #d4af37; /* لون ذهبي فخم */
+            color: #d4af37; 
             font-size: 24px;
             cursor: pointer;
             transition: transform 0.3s, color 0.3s;
@@ -82,7 +82,7 @@
             color: #ffffff;
         }
 
-        /* القائمة الجانبية التي تظهر عند الضغط */
+        
         .side-menu {
             position: fixed;
             top: 0;
@@ -97,7 +97,7 @@
         }
 
         .side-menu.active {
-            right: 70px; /* تفتح بجانب الخط الأسود */
+            right: 70px; 
         }
 
         .side-menu a {
@@ -119,9 +119,9 @@
             color: #d4af37;
         }
 
-        /* حاوية الصفحات */
+        
         .page-container {
-            margin-right: 70px; /* لترك مساحة للشريط الأيمن */
+            margin-right: 70px; 
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -145,7 +145,7 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* المربع الكبير الواسع ذو الخلفية الشفافة المكررة */
+        
         .luxury-box {
             position: relative;
             width: 100%;
@@ -160,7 +160,7 @@
             backdrop-filter: blur(10px);
         }
 
-        /* زر المربع في الصفحة الأولى */
+        
         .iphone-gate-btn {
             background: rgba(20, 20, 20, 0.9);
             border: 2px solid #d4af37;
@@ -192,7 +192,7 @@
             font-weight: bold;
         }
 
-        /* عناصر الصفحة الثانية */
+        
         .box-title {
             color: #ffffff;
             font-size: 28px;
@@ -202,7 +202,7 @@
             letter-spacing: 1px;
         }
 
-        /* زر حالة "شغال" في زاوية المربع */
+        
         .status-badge {
             position: absolute;
             top: 20px;
@@ -219,7 +219,7 @@
             gap: 8px;
         }
 
-        /* الأيقونة الخضراء الدائرية المتحركة (نبض) */
+        
         .status-badge i {
             font-size: 10px;
             animation: pulse 1.5s infinite;
@@ -231,13 +231,13 @@
             100% { transform: scale(0.8); opacity: 0.5; }
         }
 
-        /* صورة الهاك المائلة وتتحرك فوق وتحت بشويش */
+        
         .hack-img {
             width: 180px;
             height: auto;
             margin: 20px auto;
             display: block;
-            transform: rotate(7deg); /* مائلة لليمين */
+            transform: rotate(7deg); 
             filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
             animation: floatAndTilt 4s ease-in-out infinite;
         }
@@ -248,7 +248,7 @@
             100% { transform: rotate(7deg) translateY(0px); }
         }
 
-        /* الأزرار المستطيلة مع تأثير اللمعان المتحرك */
+        
         .action-btn {
             position: relative;
             display: inline-block;
@@ -256,7 +256,7 @@
             max-width: 340px;
             padding: 16px 32px;
             margin: 15px auto;
-            background-color: #bd1e2b; /* مستوحى من اللون الأحمر في صورة دلتا ليتناسق معها */
+            background-color: #bd1e2b; 
             color: #ffffff;
             font-size: 18px;
             font-weight: bold;
@@ -264,7 +264,7 @@
             border-radius: 12px;
             border: none;
             cursor: pointer;
-            overflow: hidden; /* ضروري لقشط اللمعان خارج الزر */
+            overflow: hidden; 
             box-shadow: 0 5px 15px rgba(189, 30, 43, 0.4);
             transition: transform 0.2s, box-shadow 0.2s;
             text-align: center;
@@ -275,7 +275,7 @@
             box-shadow: 0 8px 25px rgba(189, 30, 43, 0.6);
         }
 
-        /* تأثير اللمعان الذكي والفاخر */
+        
         .action-btn::after {
             content: '';
             position: absolute;
@@ -299,7 +299,7 @@
             100% { left: 150%; }
         }
 
-        /* زر العودة الفخم */
+        
         .back-btn {
             background: none;
             border: 1px solid rgba(255,255,255,0.3);
@@ -318,28 +318,28 @@
 </head>
 <body>
 
-    <!-- الخلفية الشاملة -->
+    
     <div class="main-background"></div>
     <div class="overlay"></div>
 
-    <!-- الخط الأسود الأيمن الطويل وفوقه زر القائمة -->
+    
     <div class="side-bar-line">
         <button class="menu-btn" onclick="toggleMenu()">
             <i class="fas fa-bars"></i>
         </button>
     </div>
 
-    <!-- القائمة الجانبية السحرية -->
+    
     <div class="side-menu" id="sideMenu">
         <a href="#" onclick="showPage('home')">الرئيسية</a>
         <a href="#" onclick="showPage('hacks')">هاكات الآيفون</a>
-        <a href="https://bybokaarabic.bz" target="_blank">الموقع الرسمي</a>
+        <a href="" target="_blank">هاكات الاندرويد | صيانة </a>
     </div>
 
-    <!-- حاوية الصفحات الرئيسية -->
+    
     <div class="page-container">
 
-        <!-- الصفحة الأولى -->
+        
         <div id="homePage" class="page active">
             <div class="luxury-box">
                 <button class="iphone-gate-btn" onclick="showPage('hacks')">
@@ -349,10 +349,10 @@
             </div>
         </div>
 
-        <!-- الصفحة الثانية (صفحة الهاكات) -->
+        
         <div id="hacksPage" class="page">
             <div class="luxury-box">
-                <!-- زر حالة شغال في الزاوية بأيقونة نبض احترافية -->
+                
                 <div class="status-badge">
                     <i class="fas fa-circle"></i>
                     شغال
@@ -360,10 +360,10 @@
 
                 <h2 class="box-title">Delta - دلـتـا</h2>
 
-                <!-- صورة الهاك المائلة والمتحركة -->
+                
                 <img src="https://i.postimg.cc/JhrQQYV2/E367-C7-D2-4750-4524-ADD5-B9-A8-DA953734.png" alt="Delta Logo" class="hack-img">
 
-                <!-- الأزرار بالتثبيت المباشر ولمعان فخم -->
+                
                 <a href="itms-services://?action=download-manifest&url=https://delta.bz/manifest.plist" class="action-btn">
                     Delta Install
                 </a>
@@ -381,24 +381,24 @@
 
     </div>
 
-    <!-- نظام التشغيل الذكي والتنقل -->
+    
     <script>
-        // دالة لفتح وإغلاق القائمة الجانبية
+        
         function toggleMenu() {
             const menu = document.getElementById('sideMenu');
             menu.classList.toggle('active');
         }
 
-        // دالة التنقل بين الصفحات بسلاسة
+        
         function showPage(pageId) {
-            // إخفاء كل الصفحات أولاً
+            
             document.getElementById('homePage').classList.remove('active');
             document.getElementById('hacksPage').classList.remove('active');
             
-            // إغلاق القائمة تلقائياً عند اختيار صفحة
+            
             document.getElementById('sideMenu').classList.remove('active');
 
-            // إظهار الصفحة المطلوبة
+            
             if(pageId === 'home') {
                 document.getElementById('homePage').classList.add('active');
             } else if(pageId === 'hacks') {
@@ -406,7 +406,7 @@
             }
         }
 
-        // إغلاق القائمة عند الضغط في أي مكان خارجها لحماية المظهر الفخم
+       
         document.addEventListener('click', function(event) {
             const menu = document.getElementById('sideMenu');
             const menuBtn = document.querySelector('.menu-btn');
