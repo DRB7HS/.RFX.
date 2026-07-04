@@ -341,7 +341,7 @@
     <div class="side-menu" id="sideMenu">
         <a href="#" onclick="showPage('home')">الرئيسية</a>
         <a href="#" onclick="showPage('hacks')">هاكات الآيفون</a>
-        <a href="" target="_blank">هاكات الاندرويد | صيانة </a>
+        <a href="#" onclick="showPage('hack')">هاكات الاندرويد | صيانة</a>
         <a href="https://drb7hs.github.io/.RFX./RFX.mobileconfig" target="_blank">تنزيل الموقع </a>
     </div>
 
@@ -390,6 +390,45 @@
 
     </div>
 
+    <div id="hackPage" class="page active">
+            <div class="luxury-box">
+                <button class="iphone-gate-btn" onclick="showPage('hacks')">
+                    <i class="fas fa-mobile-alt"></i>
+                    <p>هاكات الاندوريد مثل دلتا و غيرها من الهاكات <br> <span style="color: #d4af37;">+ Android فقط</span></p>
+                </button>
+            </div>
+        </div>
+
+<div id="hacksPage" class="page">
+            <div class="luxury-box">
+                
+                <div class="status-badge">
+                    <i class="fas fa-circle"></i>
+                    شغال
+                </div>
+
+                <h2 class="box-title">Delta - دلـتـا</h2>
+
+                
+                <img src="https://i.postimg.cc/JhrQQYV2/E367-C7-D2-4750-4524-ADD5-B9-A8-DA953734.png" alt="Delta Logo" class="hack-img">
+
+                
+                <a href="" class="action-btn">
+                    Delta Install
+                </a>
+
+                <a href="" class="action-btn">
+                    Delta VNG Install
+                </a>
+
+                <br>
+                <button class="back-btn" onclick="showPage('home')">
+                    <i class="fas fa-arrow-right"></i> العودة للرئيسية
+                </button>
+            </div>
+        </div>
+
+    </div>
     
     <script>
         
@@ -403,6 +442,7 @@
             
             document.getElementById('homePage').classList.remove('active');
             document.getElementById('hacksPage').classList.remove('active');
+            document.getElementById('hackPage').classList.remove('active');
             
             
             document.getElementById('sideMenu').classList.remove('active');
@@ -412,6 +452,8 @@
                 document.getElementById('homePage').classList.add('active');
             } else if(pageId === 'hacks') {
                 document.getElementById('hacksPage').classList.add('active');
+            } else if(pageId === 'hack') {
+                document.getElementById('hackPage').classList.add('active');
             }
         }
 
