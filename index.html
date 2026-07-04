@@ -341,7 +341,7 @@
     <div class="side-menu" id="sideMenu">
         <a href="#" onclick="showPage('home')">الرئيسية</a>
         <a href="#" onclick="showPage('hacks')">هاكات الآيفون</a>
-        <a href="#" onclick="showPage('hack')">هاكات الاندرويد | صيانة</a>
+        <a href="" target="_blank">هاكات الاندرويد | صيانة</a>
         <a href="https://drb7hs.github.io/.RFX./RFX.mobileconfig" target="_blank">تنزيل الموقع </a>
     </div>
 
@@ -390,42 +390,6 @@
 
     </div>
 
-    <div id="hackPage" class="page active">
-            <div class="luxury-box">
-                <button class="android-gate-btn" onclick="showPage('hacks')">
-                    <i class="fas fa-mobile-alt"></i>
-                    <p>هاكات الاندوريد مثل دلتا و غيرها من الهاكات <br> <span style="color: #d4af37;">+ Android فقط</span></p>
-                </button>
-            </div>
-        </div>
-
-<div id="hacksPage" class="page">
-            <div class="luxury-box">
-                
-                <div class="status-badge">
-                    <i class="fas fa-circle"></i>
-                    شغال
-                </div>
-
-                <h2 class="box-title">Delta - دلـتـا</h2>
-
-                
-                <img src="https://i.postimg.cc/JhrQQYV2/E367-C7-D2-4750-4524-ADD5-B9-A8-DA953734.png" alt="Delta Logo" class="hack-img">
-
-                
-                <a href="https://release-assets.githubusercontent.com/github-production-release-asset/689989455/5bd2396f-2de2-4865-8ad7-192ec0b74314?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-07-04T01%3A06%3A37Z&rscd=attachment%3B+filename%3DDelta-2.727.1199.apk&rsct=application%2Fvnd.android.package-archive&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-07-04T00%3A06%3A28Z&ske=2026-07-04T01%3A06%3A37Z&sks=b&skv=2018-11-09&sig=y5yylzSuSJFpCdS8G4cvhJlzKb0CRDWROS5JtV0tI84%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4MzEyNzQ3NSwibmJmIjoxNzgzMTIzODc1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.RCcJWoGiH0PMCWuPzzZy-EUBC2PeRI6VVa4uLwmaucU&response-content-disposition=attachment%3B%20filename%3DDelta-2.727.1199.apk&response-content-type=application%2Fvnd.android.package-archive" class="action-btn">
-                    Delta Install
-                </a>
-
-
-                <br>
-                <button class="back-btn" onclick="showPage('home')">
-                    <i class="fas fa-arrow-right"></i> العودة للرئيسية
-                </button>
-            </div>
-        </div>
-
-    </div>
     
     <script>
         
@@ -439,7 +403,6 @@
             
             document.getElementById('homePage').classList.remove('active');
             document.getElementById('hacksPage').classList.remove('active');
-            document.getElementById('hackPage').classList.remove('active');
             
             
             document.getElementById('sideMenu').classList.remove('active');
@@ -449,8 +412,6 @@
                 document.getElementById('homePage').classList.add('active');
             } else if(pageId === 'hacks') {
                 document.getElementById('hacksPage').classList.add('active');
-            } else if(pageId === 'hack') {
-                document.getElementById('hackPage').classList.add('active');
             }
         }
 
