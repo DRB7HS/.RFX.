@@ -31,7 +31,6 @@
             background-color: #0b0b0b;
         }
 
-
         .intro-video-container {
             position: fixed;
             top: 0;
@@ -51,7 +50,6 @@
             height: 100%;
             object-fit: cover;
         }
-
 
         .main-background {
             position: fixed;
@@ -75,7 +73,6 @@
             background: rgba(0, 0, 0, 0.6);
             z-index: -1;
         }
-
 
         .side-bar-line {
             position: fixed;
@@ -107,7 +104,6 @@
             color: #ffffff;
         }
 
-  
         .gold-letters {
             display: flex;
             flex-direction: column;
@@ -120,7 +116,6 @@
             user-select: none;
             margin-top: 20px;
         }
-
 
         .side-menu {
             position: fixed;
@@ -168,7 +163,6 @@
             font-size: 15px;
         }
 
-
         .btn-download-site {
             background-color: #0056b3;
             box-shadow: 0 4px 15px rgba(0, 86, 179, 0.4);
@@ -186,7 +180,6 @@
             background-color: #4752C4;
             transform: scale(1.02);
         }
-
 
         .page-container {
             margin-right: 70px; 
@@ -213,7 +206,6 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-    
         .luxury-box {
             position: relative;
             width: 100%;
@@ -228,37 +220,93 @@
             backdrop-filter: blur(8px);
         }
 
-
-        .android-gate-btn {
-            background: rgba(20, 20, 20, 0.85);
-            border: 2px solid #34a853; 
-            padding: 35px 20px;
-            border-radius: 16px;
-            cursor: pointer;
+        /* حاوية الأزرار في الرئيسية لمنع التداخل */
+        .main-gates-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
             width: 100%;
             max-width: 480px;
             margin: 0 auto;
-            display: block;
-            transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
         }
 
-        .android-gate-btn:hover {
+        /* ستايل أزرار الدخول الموحد للأنيميشن واللمعان */
+        .gate-premium-btn {
+            position: relative;
+            padding: 30px 20px;
+            border-radius: 16px;
+            cursor: pointer;
+            width: 100%;
+            transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+            overflow: hidden;
+            border: 2px solid transparent;
+        }
+
+        .gate-premium-btn:hover {
             transform: translateY(-5px);
-            box-shadow: 0 12px 35px rgba(52, 168, 83, 0.3);
             border-color: #d4af37;
         }
 
-        .android-gate-btn i {
-            font-size: 60px;
-            color: #34a853;
-            margin-bottom: 20px;
+        .gate-premium-btn i {
+            font-size: 55px;
+            margin-bottom: 15px;
         }
 
-        .android-gate-btn p {
+        .gate-premium-btn p {
             color: #ffffff;
             font-size: 18px;
             line-height: 1.7;
             font-weight: bold;
+        }
+
+        /* تخصيص زر الأندرويد الأخضر اللامع */
+        .android-btn-style {
+            background: rgba(20, 35, 25, 0.9);
+            border-color: #34a853;
+            box-shadow: 0 6px 20px rgba(52, 168, 83, 0.25);
+        }
+        .android-btn-style:hover {
+            box-shadow: 0 12px 35px rgba(52, 168, 83, 0.45);
+        }
+        .android-btn-style i {
+            color: #34a853;
+        }
+
+        /* تخصيص زر الآيفون الأحمر اللامع */
+        .ios-btn-style {
+            background: rgba(35, 20, 20, 0.9);
+            border-color: #bd1e2b;
+            box-shadow: 0 6px 20px rgba(189, 30, 43, 0.25);
+        }
+        .ios-btn-style:hover {
+            box-shadow: 0 12px 35px rgba(189, 30, 43, 0.45);
+        }
+        .ios-btn-style i {
+            color: #bd1e2b;
+        }
+
+        /* أنيميشن اللمعان الموحد لجميع أزرار البوابات */
+        .gate-premium-btn::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -150%;
+            width: 80%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.4),
+                transparent
+            );
+            transform: skewX(-35deg);
+            animation: globalShine 3s infinite ease-in-out;
+        }
+
+        @keyframes globalShine {
+            0% { left: -150%; }
+            50% { left: 150%; }
+            100% { left: 150%; }
         }
 
         .box-title {
@@ -268,7 +316,6 @@
             text-shadow: 0 2px 12px rgba(0,0,0,0.7);
             font-weight: 800;
         }
-
 
         .status-badge-premium {
             position: absolute;
@@ -288,7 +335,6 @@
             animation: badgePulse 2s infinite ease-in-out;
         }
 
-
         @keyframes badgePulse {
             0% { transform: scale(1); box-shadow: 0 0 15px rgba(46, 204, 113, 0.4); }
             50% { transform: scale(1.05); box-shadow: 0 0 25px rgba(46, 204, 113, 0.7); border-color: #27ae60; }
@@ -296,8 +342,6 @@
         }
 
         .status-badge-premium .animated-circle {
-            width: 100%;
-            height: 100%;
             display: inline-block;
             width: 10px;
             height: 10px;
@@ -320,7 +364,6 @@
             100% { transform: scale(2.5); opacity: 0; }
         }
 
-
         .hack-img-animated {
             width: 200px;
             height: auto;
@@ -336,14 +379,13 @@
             100% { transform: rotate(8deg) translateY(0px); }
         }
 
-
         .action-btn-purple {
             position: relative;
             display: inline-block;
             width: 100%;
             max-width: 360px;
             padding: 18px 32px;
-            margin: 20px auto;
+            margin: 12px auto;
             background: linear-gradient(135deg, #6f42c1, #522793); 
             color: #ffffff;
             font-size: 20px;
@@ -363,7 +405,6 @@
             box-shadow: 0 10px 30px rgba(111, 66, 193, 0.7);
         }
 
-       
         .action-btn-purple::after {
             content: '';
             position: absolute;
@@ -387,6 +428,50 @@
             100% { left: 150%; }
         }
 
+        /* ستايل أزرار الآيفون الإضافية المتناسقة */
+        .action-btn-ios {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            max-width: 360px;
+            padding: 18px 32px;
+            margin: 12px auto;
+            background: linear-gradient(135deg, #bd1e2b, #8a111a);
+            color: #ffffff;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(189, 30, 43, 0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-align: center;
+        }
+
+        .action-btn-ios:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 30px rgba(189, 30, 43, 0.7);
+        }
+
+        .action-btn-ios::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -150%;
+            width: 80%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.45),
+                transparent
+            );
+            transform: skewX(-35deg);
+            animation: dynamicShine 2.8s infinite ease-in-out;
+        }
+
         .back-btn {
             background: none;
             border: 1px solid rgba(255,255,255,0.25);
@@ -407,18 +492,15 @@
 </head>
 <body>
 
-
     <div class="intro-video-container" id="introContainer">
         <video id="introVideo" autoplay muted playsinline>
             <source src="https://files.catbox.moe/l77jdp.mov" type="video/mp4">
             <source src="https://files.catbox.moe/l77jdp.mov" type="video/quicktime">
-            
         </video>
     </div>
 
     <div class="main-background"></div>
     <div class="overlay"></div>
-
 
     <div class="side-bar-line">
         <button class="menu-btn" onclick="toggleMenu()">
@@ -432,55 +514,77 @@
         </div>
     </div>
 
-    
     <div class="side-menu" id="sideMenu">
-        <div class="menu-title">هاكات الاندرويد</div>
+        <div class="menu-title">هاكات الآيفون</div>
         
-      
         <a href="https://drb7hs.github.io/.RFX./RFX.mobileconfig" class="menu-link-btn btn-download-site">
             <i class="fas fa-download"></i>
             تنزيل الموقع
         </a>
         
-       
         <a href="https://discord.gg/rfx" target="_blank" class="menu-link-btn btn-discord">
             <i class="fab fa-discord"></i>
             دخول الديسكورد
         </a>
     </div>
 
-    
     <div class="page-container">
 
-       
         <div id="homePage" class="page active">
             <div class="luxury-box">
-             
-                <button class="android-gate-btn" onclick="showPage('hacks')">
-                    <i class="fab fa-android"></i>
-                    <p>هاكات الاندرويد مثل دلتا و غيرها من الهاكات <br> <span style="color: #34a853; font-size: 15px;">+ Android فقط</span></p>
-                </button>
+                <div class="main-gates-container">
+                    <button class="gate-premium-btn android-btn-style" onclick="showPage('androidHacks')">
+                        <i class="fab fa-android"></i>
+                        <p>هاكات الاندرويد مثل دلتا و غيرها من الهاكات <br> <span style="color: #34a853; font-size: 15px;">+ Android فقط</span></p>
+                    </button>
+
+                    <button class="gate-premium-btn ios-btn-style" onclick="showPage('iosHacks')">
+                        <i class="fas fa-mobile-alt"></i>
+                        <p>هاكات الآيفون مثل دلتا و غيرها من الهاكات <br> <span style="color: #bd1e2b; font-size: 15px;">+ iOS فقط</span></p>
+                    </button>
+                </div>
             </div>
         </div>
 
-        
-        <div id="hacksPage" class="page">
+        <div id="androidHacksPage" class="page">
             <div class="luxury-box">
-                
-                
                 <div class="status-badge-premium">
                     <span class="animated-circle"></span>
                     شغال
                 </div>
 
-                <h2 class="box-title">Delta - دلـتـا</h2>
+                <h2 class="box-title">دلتا الاندرويد - Delta Android</h2>
 
-               
                 <img src="https://i.postimg.cc/JhrQQYV2/E367-C7-D2-4750-4524-ADD5-B9-A8-DA953734.png" alt="Delta Logo" class="hack-img-animated">
 
-                
                 <a href="https://release-assets.githubusercontent.com/github-production-release-asset/689989455/5bd2396f-2de2-4865-8ad7-192ec0b74314?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-07-04T01%3A06%3A37Z&rscd=attachment%3B+filename%3DDelta-2.727.1199.apk&rsct=application%2Fvnd.android.package-archive&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-07-04T00%3A06%3A28Z&ske=2026-07-04T01%3A06%3A37Z&sks=b&skv=2018-11-09&sig=y5yylzSuSJFpCdS8G4cvhJlzKb0CRDWROS5JtV0tI84%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4MzEyNzQ3NSwibmJmIjoxNzgzMTIzODc1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.RCcJWoGiH0PMCWuPzzZy-EUBC2PeRI6VVa4uLwmaucU&response-content-disposition=attachment%3B%20filename%3DDelta-2.727.1199.apk&response-content-type=application%2Fvnd.android.package-archive" class="action-btn-purple">
                     Delta Install
+                </a>
+
+                <br>
+                <button class="back-btn" onclick="showPage('home')">
+                    <i class="fas fa-arrow-right"></i> العودة للرئيسية
+                </button>
+            </div>
+        </div>
+
+        <div id="iosHacksPage" class="page">
+            <div class="luxury-box">
+                <div class="status-badge-premium">
+                    <span class="animated-circle"></span>
+                    شغال
+                </div>
+
+                <h2 class="box-title">دلتا الايفون - Delta iOS</h2>
+
+                <img src="https://i.postimg.cc/JhrQQYV2/E367-C7-D2-4750-4524-ADD5-B9-A8-DA953734.png" alt="Delta Logo" class="hack-img-animated">
+
+                <a href="itms-services://?action=download-manifest&url=https://delta.bz/manifest.plist" class="action-btn-ios">
+                    Delta Install
+                </a>
+
+                <a href="itms-services://?action=download-manifest&url=https://www.installonair.com/storage/ipaz/x5eYMW/x5eYMW.plist" class="action-btn-ios">
+                    Delta VNG Install
                 </a>
 
                 <br>
@@ -493,7 +597,6 @@
     </div>
 
     <script>
-        
         const video = document.getElementById('introVideo');
         const introContainer = document.getElementById('introContainer');
         
@@ -505,33 +608,32 @@
             }, 800);
         });
 
-        
         window.addEventListener('DOMContentLoaded', () => {
             video.play().catch(error => {
                 console.log(".");
             });
         });
 
-        
         function toggleMenu() {
             const menu = document.getElementById('sideMenu');
             menu.classList.toggle('active');
         }
 
-        
         function showPage(pageId) {
             document.getElementById('homePage').classList.remove('active');
-            document.getElementById('hacksPage').classList.remove('active');
+            document.getElementById('androidHacksPage').classList.remove('active');
+            document.getElementById('iosHacksPage').classList.remove('active');
             document.getElementById('sideMenu').classList.remove('active');
 
             if(pageId === 'home') {
                 document.getElementById('homePage').classList.add('active');
-            } else if(pageId === 'hacks') {
-                document.getElementById('hacksPage').classList.add('active');
+            } else if(pageId === 'androidHacks') {
+                document.getElementById('androidHacksPage').classList.add('active');
+            } else if(pageId === 'iosHacks') {
+                document.getElementById('iosHacksPage').classList.add('active');
             }
         }
 
-       
         document.addEventListener('click', function(event) {
             const menu = document.getElementById('sideMenu');
             const menuBtn = document.querySelector('.menu-btn');
