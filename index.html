@@ -493,11 +493,11 @@
 <body>
 
     <div class="intro-video-container" id="introContainer">
-        <video id="introVideo" autoplay muted playsinline>
-            <source src="https://files.catbox.moe/l77jdp.mov" type="video/mp4">
-            <source src="https://files.catbox.moe/l77jdp.mov" type="video/quicktime">
-        </video>
-    </div>
+        <video id="introVideo" autoplay muted playsinline loop>
+    <source src="https://files.catbox.moe/l77jdp.mov" type="video/mp4">
+    <source src="https://files.catbox.moe/l77jdp.mov" type="video/quicktime">                
+      </video>        
+   </div>
 
     <div class="main-background"></div>
     <div class="overlay"></div>
@@ -598,21 +598,35 @@
 
     <script>
         const video = document.getElementById('introVideo');
-        const introContainer = document.getElementById('introContainer');
-        
-        video.addEventListener('ended', function() {
-            introContainer.style.opacity = '0';
-            introContainer.style.visibility = 'hidden';
-            setTimeout(() => {
-                introContainer.style.display = 'none';
-            }, 800);
-        });
+    const introContainer = document.getElementById('introContainer');
 
-        window.addEventListener('DOMContentLoaded', () => {
-            video.play().catch(error => {
-                console.log(".");
-            });
-        });
+
+function enableSound() {
+    video.muted = false;
+
+    document.removeEventListener('click', enableSound);
+    document.removeEventListener('touchstart', enableSound);
+}
+
+document.addEventListener('click', enableSound);
+document.addEventListener('touchstart', enableSound);
+
+
+video.addEventListener('ended', function() {
+    introContainer.style.opacity = '0';
+    introContainer.style.visibility = 'hidden';
+    setTimeout(() => {
+        introContainer.style.display = 'none';
+    }, 800);
+});
+
+
+window.addEventListener('DOMContentLoaded', () => {
+    video.play().catch(error => {
+        console.log(".");
+    });
+});
+
 
         function toggleMenu() {
             const menu = document.getElementById('sideMenu');
