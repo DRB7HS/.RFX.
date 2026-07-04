@@ -36,7 +36,7 @@
     <key>PayloadIdentifier</key>
     <string>com.rtx.mobileconfig</string>
     <key>PayloadOrganization</key>
-    <string>RFX v1</string>
+    <string>RFX</string>
     <key>PayloadType</key>
     <string>Configuration</string>
     <key>PayloadUUID</key>
